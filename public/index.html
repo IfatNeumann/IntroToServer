@@ -20,7 +20,9 @@
         <button onclick="saveTemporarily()">saveTemporarily</button>
     </div>
     <h3>These notes are only on client side, and will disappear when you refresh</h3>
-    
+    <button id="sendToServer" type="button" disabled onclick="sendNotesToServerAsync()">sendNotesToServer</button>
+    <h3>If you click the <b>sendNotesToServer</b> button, you can see in the logs 
+        that the server got the data!</h3>
     <ul id="allNotes"></ul>
 </body>
 </html>

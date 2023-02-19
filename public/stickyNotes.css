@@ -136,11 +136,6 @@ body {
   }
   
   button{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     background-color: #f1f1f1;
     color: black;
     font-size: 26px;
@@ -149,9 +144,18 @@ body {
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+    margin: 5px 30px;
   }
   
   button:hover {
     background-color: rgb(247, 255, 192);
     color: black;
+  }
+
+  button:disabled,
+  button[disabled] {
+      border: 1px solid #999999;
+      background-color: darkgrey;
+      color: #fff;
+      cursor: not-allowed;
   }

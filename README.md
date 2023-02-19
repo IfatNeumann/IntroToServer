@@ -1,4 +1,4 @@
-# IntroServer - Introduction to server side in JS
+# IntroToServer - Introduction to server side in JS
 This is aimed to be tought in [AliceCode](https://alicecode.org/en) and is based
  on [The Coding Train course](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X) parts 2.1-2.4.
 
@@ -26,3 +26,10 @@ Requirements:
     1. For client-side changes, refresh the browser
     1. For server-side changes, restart the host (via the terminal) 
 
+
+## Stage 2 - Send Data To Server
+**Use post to send data and get a respond the server received it**
+
+Added a `sendNotesToServer` button that clicking it sends the notes to the server, and the server sends back a respond.
+
+Notes are not saved yet, and refreshing the page / restarting the server side will start over.
