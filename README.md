@@ -28,8 +28,27 @@ Requirements:
 
 
 ## Stage 2 - Send Data To Server
-**Use post to send data and get a respond the server received it**
+**Use 'post' to send data and get a respond from the server**
 
-Added a `sendNotesToServer` button that clicking it sends the notes to the server, and the server sends back a respond.
+Added a `sendTheNoteToServer` button that clicking it sends the note to the server, and the server sends back a response: List of all the notes it got!
 
-Notes are not saved yet, and refreshing the page / restarting the server side will start over.
+This list is displayed in the html in order to emphasize the difference between restarting the client side and restarting the server side.
+
+The notes are not saved yet, and restarting the server side will clear them.
+
+(At this stage I also did some refactoring to increase readability)
+
+### Give it a try! (Try predicting the correct answer before checking)
+1. Refresh the client side:
+    1. Start the server (`node index.js`) and start the client (`localhost:3000`)
+    1. Add a note: click **saveTemporarily** -> click **sendTheNoteToServer**.
+    1. Add another note! You now have 2 notes.
+    1. Refresh the page (= restart the client)
+    1. Add a note! How many notes are in each list?
+
+1. Refresh the server side:
+    1. Start the server (`node index.js`) and start the client (`localhost:3000`)
+    1. Add a note: click **saveTemporarily** -> click **sendTheNoteToServer**.
+    1. Add another note! You now have 2 notes.
+    1. Restart the server (Ctrl+C -> `node index.js`)
+    1. Add a note! How many notes are in each list?

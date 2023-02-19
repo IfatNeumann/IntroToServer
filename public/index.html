@@ -17,12 +17,42 @@
             <h2 id="newTitle" contenteditable>Title #1</h2>
             <p id="newContent" contenteditable>Text Content #1</p>
         </a>
-        <button onclick="saveTemporarily()">saveTemporarily</button>
     </div>
-    <h3>These notes are only on client side, and will disappear when you refresh</h3>
-    <button id="sendToServer" type="button" disabled onclick="sendNotesToServerAsync()">sendNotesToServer</button>
-    <h3>If you click the <b>sendNotesToServer</b> button, you can see in the logs 
-        that the server got the data!</h3>
-    <ul id="allNotes"></ul>
+    <table>
+        <tr>
+            <td>
+                <button id="saveTempBtn" onclick="saveTemporarily()">saveTemporarily</button>
+            </td>
+            <td>
+                <h3>This note is only on client side, and the server doesn't know about it. Refreshing the page will clear it</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="sendToServerBtn" type="button" disabled onclick="sendTheNoteToServer()">sendTheNoteToServer</button>
+            </td>
+            <td>
+                <h3>This note reached the server, and restarting the server will clear it. Refreshing the page won't!</h3>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>
+                <h3>List of locally saved notes:</h3>
+            </th>
+            <th>
+                <h3>List of notes in server: </h3>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <ul id="allLocalNotes"></ul>
+            </td>
+            <td>
+                <ul id="allServerNotes"></ul>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
