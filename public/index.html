@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="stickyNotes.js"></script>
+    <link rel="stylesheet" href="stickyNotes.css">
+    <link rel="icon" type="image/x-icon" href="sticky_note_icon.png">
+    <title>Sticky Notes Website</title>
+</head>
+<body>
+    <h1>Sticky Notes Website</h1>
+    <h3>Please edit the sticky note and click the <b>saveTemporarily</b> button</h3>
+    <div>
+        <a href="#">
+            <h2 id="newTitle" contenteditable>Title #1</h2>
+            <p id="newContent" contenteditable>Text Content #1</p>
+        </a>
+        <button onclick="saveTemporarily()">saveTemporarily</button>
+    </div>
+    <h3>These notes are only on client side, and will disappear when you refresh</h3>
+    
+    <ul id="allNotes"></ul>
+</body>
+</html>
